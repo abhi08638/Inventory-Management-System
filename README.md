@@ -6,6 +6,7 @@ This is to showcase knowledge of creating a UI for users with proper preventativ
 There is a main screen where you search for parts/products in a table. There is functionality to delete parts or products that are not tied to each other. Finally, there is a button to create new parts or products.
 
 List of screens
+-------------------
 Main Screen, Add Part, Modify Part, Add Product, Modify Product
 
 Parts can be added to Products
