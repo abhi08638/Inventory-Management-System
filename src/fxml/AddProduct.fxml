@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddProductController">
+   <children>
+      <Label layoutX="30.0" layoutY="33.0" text="Add Product">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancel" layoutX="947.0" layoutY="482.0" mnemonicParsing="false" onAction="#doCancel" text="Cancel" />
+      <Button fx:id="save" layoutX="875.0" layoutY="482.0" mnemonicParsing="false" onAction="#doSave" prefHeight="25.0" prefWidth="51.0" text="Save" />
+      <Label layoutX="77.0" layoutY="85.0" text="ID" />
+      <Label layoutX="77.0" layoutY="126.0" text="Name" />
+      <Label layoutX="77.0" layoutY="165.0" text="Inv" />
+      <Label layoutX="77.0" layoutY="204.0" text="Price/Cost" />
+      <Label layoutX="77.0" layoutY="243.0" text="Max" />
+      <TextField fx:id="productId" disable="true" editable="false" layoutX="201.0" layoutY="81.0" text="Auto Gen - Disabled" />
+      <TextField fx:id="name" layoutX="201.0" layoutY="122.0" />
+      <TextField fx:id="inStock" layoutX="201.0" layoutY="161.0" />
+      <TextField fx:id="price" layoutX="201.0" layoutY="200.0" />
+      <TextField fx:id="max" layoutX="201.0" layoutY="239.0" prefHeight="25.0" prefWidth="69.0" />
+      <Label layoutX="289.0" layoutY="243.0" text="Min" />
+      <TextField fx:id="min" layoutX="326.0" layoutY="239.0" prefHeight="25.0" prefWidth="69.0" />
+      <Button layoutX="795.0" layoutY="44.0" mnemonicParsing="false" onAction="#doPartSearch" text="Search" />
+      <TextField fx:id="allPartSearchbox" layoutX="851.0" layoutY="44.0" />
+      <TableView fx:id="allPartsTable" layoutX="520.0" layoutY="82.0" prefHeight="154.0" prefWidth="480.0">
+         <columns>
+            <TableColumn fx:id="allPartId" editable="false" prefWidth="89.0" text="Part ID" />
+            <TableColumn fx:id="allPartName" editable="false" prefWidth="174" text="Part Name" />
+            <TableColumn fx:id="allPartInv" editable="false" prefWidth="100" text="Inventory Level" />
+            <TableColumn fx:id="allPartPrice" editable="false" prefWidth="115.0" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <TableView fx:id="productPartsTable" layoutX="518.0" layoutY="288.0" prefHeight="154.0" prefWidth="480.0">
+         <columns>
+            <TableColumn fx:id="productPartId" editable="false" prefWidth="89.0" text="Part ID" />
+            <TableColumn fx:id="productPartName" editable="false" prefWidth="174" text="Part Name" />
+            <TableColumn fx:id="productPartInv" editable="false" prefWidth="100" text="Inventory Level" />
+            <TableColumn fx:id="productPartPrice" editable="false" prefWidth="115.0" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <Button layoutX="948.0" layoutY="444.0" mnemonicParsing="false" onAction="#deletePart" text="Delete" />
+      <Button layoutX="962.0" layoutY="239.0" mnemonicParsing="false" onAction="#addPart" text="Add" />
+   </children>
+</Pane>
